@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:padding="32dp">
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alerta Ruta"
+        android:textColor="@color/texto"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp" />
+
+    <TextView
+        android:id="@+id/textSubtitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Vibración intercalada en tu reloj: primero un pulso simple y largo, después un pulso triple corto, para mantenerte alerta en ruta."
+        android:textColor="@color/texto_secundario"
+        android:textSize="15sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/textTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/textIntervaloLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intervalo entre alertas"
+        android:textColor="@color/texto_secundario"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/textSubtitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp" />
+
+    <LinearLayout
+        android:id="@+id/rowIntervalo"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@id/textIntervaloLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/box1min"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/box_unselected"
+            android:gravity="center"
+            android:text="1 min"
+            android:textColor="@color/texto"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/box2min"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/box_selected"
+            android:gravity="center"
+            android:text="2 min"
+            android:textColor="@color/texto"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/box3min"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/box_unselected"
+            android:gravity="center"
+            android:text="3 min"
+            android:textColor="@color/texto"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnToggle"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:background="@drawable/btn_circle_off"
+        android:backgroundTint="@null"
+        android:text="APAGADO"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:elevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/rowIntervalo"
+        app:layout_constraintBottom_toTopOf="@id/textEstado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textEstado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Alerta detenida"
+        android:textColor="@color/texto"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="64dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

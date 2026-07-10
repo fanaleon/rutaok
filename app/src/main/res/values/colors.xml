@@ -1,0 +1,7 @@
+<resources>
+    <color name="fondo">#101418</color>
+    <color name="acento">#FF6B35</color>
+    <color name="acento_apagado">#3A3F44</color>
+    <color name="texto">#FFFFFF</color>
+    <color name="texto_secundario">#9AA0A6</color>
+</resources>
